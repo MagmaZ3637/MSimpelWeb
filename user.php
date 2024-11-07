@@ -29,6 +29,14 @@ if (!isset($_SESSION['hooh'])){
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+<script>
+    function toggleCheckboxes(source) {
+        const checkboxes = document.querySelectorAll('.checkbox');
+        checkboxes.forEach(checkbox => {
+            checkbox.checked = source.checked;
+        });
+    }
+</script>
 <div class="container-fluid">
     <div class="my-5">
         <h2 class="text-center">Selamat datang, <?php echo $_SESSION['user']; ?>!</h2>
@@ -40,7 +48,10 @@ if (!isset($_SESSION['hooh'])){
                     <div class="col-10">
 
                         <div class="d-flex justify-content-between align-items-center mb-4">
-                            <h3 class="fw-normal mb-0">Makan Lah</h3>
+                            <h3 class="fw-normal mb-0">Pilihan Makanan</h3>
+                            <div>
+                                <p class="mb-0"><span class="text-muted">Check all: </span><input class="justify-content-center" type="checkbox" onclick="toggleCheckboxes(this)" /></p>
+                            </div>
                         </div>
 
                         <div class="card rounded-3 mb-4">
@@ -48,7 +59,7 @@ if (!isset($_SESSION['hooh'])){
                                 <div class="row d-flex justify-content-between align-items-center">
                                     <div class="col-md-2 col-lg-2 col-xl-2">
                                         <img
-                                                src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img1.webp"
+                                                src="https://akcdn.detik.net.id/community/media/visual/2017/03/22/d3cb3b7a-aa3a-4e0a-a0d4-83828a40b5d5_43.jpg?w=700&q=90"
                                                 class="img-fluid rounded-3" alt="Soto">
                                     </div>
                                     <div class="col-md-3 col-lg-3 col-xl-3">
@@ -56,18 +67,18 @@ if (!isset($_SESSION['hooh'])){
                                         <p><span class="text-muted">Lorem ipsum dolor sit amet.</span></p>
                                     </div>
                                     <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
-                                        
+
 
                                         <input id="form1" min="0" name="soto" value="0" type="number"
                                                class="form-control form-control-sm" />
 
-                                        
+
                                     </div>
                                     <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
                                         <h5 class="mb-0">Rp10.000/P</h5>
                                     </div>
                                     <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                                        <input type="checkbox" name="csoto">
+                                        <input type="checkbox" name="cek" class="checkbox" id="foo">
                                     </div>
                                 </div>
                             </div>
@@ -78,7 +89,7 @@ if (!isset($_SESSION['hooh'])){
                                 <div class="row d-flex justify-content-between align-items-center">
                                     <div class="col-md-2 col-lg-2 col-xl-2">
                                         <img
-                                                src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img1.webp"
+                                                src="https://sanex.co.id/wp-content/uploads/2024/06/resep-rawon-daging-surabaya_43.jpeg"
                                                 class="img-fluid rounded-3" alt="Rawon">
                                     </div>
                                     <div class="col-md-3 col-lg-3 col-xl-3">
@@ -86,18 +97,18 @@ if (!isset($_SESSION['hooh'])){
                                         <p><span class="text-muted">Lorem ipsum dolor sit amet.</span></p>
                                     </div>
                                     <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
-                                        
+
 
                                         <input id="form1" min="0" name="rawon" value="0" type="number"
                                                class="form-control form-control-sm" />
 
-                                        
+
                                     </div>
                                     <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
                                         <h5 class="mb-0">Rp10.000/P</h5>
                                     </div>
                                     <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                                        <input type="checkbox" name="crawon">
+                                        <input type="checkbox" name="cek" class="checkbox" id="foo">
                                     </div>
                                 </div>
                             </div>
@@ -108,7 +119,7 @@ if (!isset($_SESSION['hooh'])){
                                 <div class="row d-flex justify-content-between align-items-center">
                                     <div class="col-md-2 col-lg-2 col-xl-2">
                                         <img
-                                                src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img1.webp"
+                                                src="https://assets-cloudflare.segari-ops.id/recipes/pecel-sayur-lsbc945mybPCf.jpg"
                                                 class="img-fluid rounded-3" alt="Pecel">
                                     </div>
                                     <div class="col-md-3 col-lg-3 col-xl-3">
@@ -116,18 +127,18 @@ if (!isset($_SESSION['hooh'])){
                                         <p><span class="text-muted">Lorem ipsum dolor sit amet.</span></p>
                                     </div>
                                     <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
-                                        
+
 
                                         <input id="form1" min="0" name="pecel" value="0" type="number"
                                                class="form-control form-control-sm" />
 
-                                        
+
                                     </div>
                                     <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
                                         <h5 class="mb-0">Rp10.000/P</h5>
                                     </div>
                                     <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                                        <input type="checkbox" name="cpecel">
+                                        <input type="checkbox" name="cek" class="checkbox" id="foo">
                                     </div>
                                 </div>
                             </div>
@@ -138,7 +149,7 @@ if (!isset($_SESSION['hooh'])){
                                 <div class="row d-flex justify-content-between align-items-center">
                                     <div class="col-md-2 col-lg-2 col-xl-2">
                                         <img
-                                                src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img1.webp"
+                                                src="https://img-global.cpcdn.com/recipes/4e4073d7dcc225a8/1360x964cq70/84-bakso-malang-ala-mamang-yang-lewat-depan-rumah-foto-resep-utama.webp"
                                                 class="img-fluid rounded-3" alt="Bakso">
                                     </div>
                                     <div class="col-md-3 col-lg-3 col-xl-3">
@@ -146,18 +157,18 @@ if (!isset($_SESSION['hooh'])){
                                         <p><span class="text-muted">Lorem ipsum dolor sit amet.</span></p>
                                     </div>
                                     <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
-                                        
+
 
                                         <input id="form1" min="0" name="bakso" value="0" type="number"
                                                class="form-control form-control-sm" />
 
-                                        
+
                                     </div>
                                     <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
                                         <h5 class="mb-0">Rp10.000/P</h5>
                                     </div>
                                     <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                                        <input type="checkbox" name="cbakso">
+                                        <input type="checkbox" name="cek" class="checkbox" id="foo">
                                     </div>
                                 </div>
                             </div>
@@ -168,7 +179,7 @@ if (!isset($_SESSION['hooh'])){
                                 <div class="row d-flex justify-content-between align-items-center">
                                     <div class="col-md-2 col-lg-2 col-xl-2">
                                         <img
-                                                src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img1.webp"
+                                                src="https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/222/2024/08/02/IMG-20240802-WA0149-1433127918.jpg"
                                                 class="img-fluid rounded-3" alt="Teh">
                                     </div>
                                     <div class="col-md-3 col-lg-3 col-xl-3">
@@ -187,7 +198,7 @@ if (!isset($_SESSION['hooh'])){
                                         <h5 class="mb-0">Rp10.000/P</h5>
                                     </div>
                                     <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                                        <input type="checkbox" name="cteh">
+                                        <input type="checkbox" name="cek" class="checkbox" id="foo">
                                     </div>
                                 </div>
                             </div>
@@ -198,7 +209,7 @@ if (!isset($_SESSION['hooh'])){
                                 <div class="row d-flex justify-content-between align-items-center">
                                     <div class="col-md-2 col-lg-2 col-xl-2">
                                         <img
-                                                src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img1.webp"
+                                                src="https://cdn1-production-images-kly.akamaized.net/I9pBFHCAjd6mj7SWClFW4TVUWaI=/680x906/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4777522/original/071308500_1710839241-iced-orange-cocktail-table__2_.jpg"
                                                 class="img-fluid rounded-3" alt="Jeruk">
                                     </div>
                                     <div class="col-md-3 col-lg-3 col-xl-3">
@@ -217,7 +228,7 @@ if (!isset($_SESSION['hooh'])){
                                         <h5 class="mb-0">Rp10.000/P</h5>
                                     </div>
                                     <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                                        <input type="checkbox" name="cjeruk">
+                                        <input type="checkbox" name="cek" class="checkbox" id="foo">
                                     </div>
                                 </div>
                             </div>
@@ -235,8 +246,8 @@ if (!isset($_SESSION['hooh'])){
         </section>
     </form>
     <a class="text-center"><button type="button" class="btn btn-outline-primary my-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Logout
-    </button></a>
+            Logout
+        </button></a>
 
     <div style="margin-top: 15%;">
         <footer class="py-1 my-1">
