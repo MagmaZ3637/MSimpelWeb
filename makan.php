@@ -19,7 +19,10 @@ if (!isset($_SESSION['hooh'])){
 }
 
 // Untuk logika cek checkbox
-
+$checklist = $_POST['cek'];
+if (is_null($checklist)) {
+    echo "<script>alert('Tolong Ceklis semua'); window.location.href='user.php';</script>";
+}
 
 // Untuk Logika Makanan, Jumlah, Dan total Harga
 $soto = $_POST['soto'];
@@ -118,16 +121,16 @@ $_SESSION['jeruk'] = $jeruk;*/
             <form class="needs-validation was-validated" novalidate="">
                 <div class="row g-3">
                     <div class="col-sm-6">
-                        <label for="firstName" class="form-label">Username</label>
-                        <input name="user" type="text" class="form-control" id="firstName" placeholder="Ex: MagmaZ3637" value="" required="">
+                        <label for="firstName" class="form-label">Atas Nama?</label>
+                        <input name="name" type="text" class="form-control" id="firstName" placeholder="Ex: MagmaZ3637" value="" required="">
                         <div class="invalid-feedback">
                             Valid first name is required.
                         </div>
                     </div>
 
                     <div class="col-sm-6">
-                        <label for="lastName" class="form-label">Password</label>
-                        <input name="pass" type="text" class="form-control" id="lastName" placeholder="Ex: passwordkamu" value="" required="">
+                        <label for="lastName" class="form-label">Negara?</label>
+                        <input name="country" type="text" class="form-control" id="lastName" placeholder="Ex: Indonesia" value="" required="">
                         <div class="invalid-feedback">
                             Valid last name is required.
                         </div>
@@ -145,7 +148,7 @@ $_SESSION['jeruk'] = $jeruk;*/
 
                 <hr class="my-4">
 
-                <button class="w-100 btn btn-outline-success btn-lg" type="submit">Cepatkan Bayar</button>
+                <button class="w-100 btn btn-outline-success btn-lg" type="submit" name="okhe">Cepatkan Bayar</button>
                 <a href="user.php"><button class="w-100 btn btn-outline-primary btn-lg" type="button">Back To Choice</button></a>
         </div>
     </div>
